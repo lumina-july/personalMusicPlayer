@@ -294,11 +294,18 @@ def show_menu():
 
 def run_program(data_file=DATA_FILE, csv_file=CSV_FILE):
     try:
-        library = storage.load_library(data_file)
+        load_result = storage.load_library(data_file)
+        library = load_result.songs
     except (storage.LibraryDataError, OSError) as error:
         print(f"无法读取音乐库：{error}")
         print("为避免覆盖原数据，程序已停止。")
         return
+    if load_result.migrated_count:
+        print(f"已迁移 {load_result.migrated_count} 首歌曲。")
+    skipped_count = len(load_result.skipped or [])
+    if skipped_count:
+        print(f"已跳过 {skipped_count} 条无法迁移的记录。")
+        print(f"错误报告：{load_result.error_report}")
     dirty = False
     while True:
         show_menu()

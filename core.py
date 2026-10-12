@@ -1,6 +1,6 @@
 """音乐库规则与计算；不读取键盘、不打印、不访问文件。"""
 
-TITLE_MAX = 100
+TITLE_MAX = 120
 ARTIST_MAX = 100
 ALBUM_MAX = 150
 GENRE_MAX = 80
