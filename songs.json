@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "晴天",
+    "artist": "周杰伦",
+    "album": "叶惠美",
+    "genre": "流行",
+    "rating": 5,
+    "favorite": true,
+    "play_count": 3
+  },
+  {
+    "id": 2,
+    "title": "夜空中最亮的星",
+    "artist": "逃跑计划",
+    "album": "世界",
+    "genre": "摇滚",
+    "rating": 4,
+    "favorite": false,
+    "play_count": 1
+  },
+  {
+    "id": 3,
+    "title": "Yellow",
+    "artist": "Coldplay",
+    "album": "Parachutes",
+    "genre": "Alternative Rock",
+    "rating": null,
+    "favorite": false,
+    "play_count": 0
+  }
+]
